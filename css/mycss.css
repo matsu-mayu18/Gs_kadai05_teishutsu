@@ -1,0 +1,174 @@
+html {
+  background: #7494c0;
+  font-size: 62.5%; /* 16px x 62.5% = 10px/[rem]*/
+  scroll-behavior: smooth;
+}
+
+.mytext__color {
+  background: #8de055;
+}
+
+/* タイトル部分 */
+.line__title {
+  width: 400px;
+  height: 60px;
+  background: #273246;
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 60px;
+
+  position: fixed;
+  top: 0;
+
+  z-index: 999999;
+}
+
+.line__container {
+  height: 80vh;
+  padding: 0;
+  background: #7494c0;
+  /* overflow: scroll; */
+
+  overflow: hidden auto;
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE */
+  -ms-overflow-style: none;
+  max-width: 400px;
+  margin: 20px auto;
+  font-size: 80%;
+}
+
+.line__container::-webkit-scrollbar {
+  /* Chrome */
+  display: none;
+}
+
+/* 相手の会話 */
+.line__container .line__left {
+  width: 100%;
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+  max-width: 80%;
+  clear: both;
+}
+
+/* アイコン画像 */
+.line__container .line__left figure {
+  width: 50px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* 正方形を用意 */
+.line__container .line__left figure img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.line__container .line__left .line__left-text {
+  margin-left: 70px;
+}
+
+.line__container .line__left .line__left-text .name {
+  font-size: 80%;
+  color: #ffffff;
+}
+
+/* コメントエリア */
+.line__container .line__left .text {
+  margin: 0;
+  position: relative;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+/* 吹き出し */
+.line__container .line__left .text::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -10px;
+  top: 10px;
+  border-right: 20px solid #ffffff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* 自分の会話 */
+.line__container .line__right {
+  position: relative;
+  display: block;
+  margin: 5px 0;
+  max-width: 75%;
+  float: right;
+  margin-right: 15px;
+  clear: both;
+}
+
+/* コメントエリア */
+.line__container .line__right .text {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #8de055;
+  margin: 0;
+  margin-left: 80px;
+}
+
+/* 吹き出し */
+.line__container .line__right .text::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -10px;
+  top: 10px;
+  border-left: 20px solid #8de055;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* 自分がスタンプを送る時 */
+.line__container .line__right .stamp {
+  position: relative;
+  margin-left: 80px;
+}
+
+/* 既読エリア */
+.line__container .line__right .date {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  text-align: right;
+  left: -30px;
+  bottom: 0px;
+  font-size: 80%;
+  color: #ffffff;
+}
+
+/* テキスト入力エリア */
+#input_text {
+  /* width: 80%; */
+  height: 30px;
+  width: 400px;
+  resize: none;
+
+  position: fixed;
+  bottom: 5%;
+}
+
+.input_text_wrapper {
+  /* background: #000;s */
+  max-width: 400px;
+}

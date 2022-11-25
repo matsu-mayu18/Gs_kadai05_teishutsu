@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/mycss.css" />
+    <title>これはLINEdayo</title>
+  </head>
+  <body>
+    <!-- ▼LINE風ここから -->
+    <div class="line__container">
+      <!-- タイトル -->
+      <div class="line__title">LINE風アプリ</div>
+
+      <!-- ▼会話エリア scrollを外すと高さ固定解除 -->
+      <div class="line__contents scroll">
+        <!-- ここに吹き出しやスタンプのタグを追加していく -->
+
+        <!-- 相手の吹き出し -->
+        <div class="line__left">
+          <figure>
+            <img src="icon.png" />
+          </figure>
+          <div class="line__left-text">
+            <div class="name">うさきち</div>
+            <div class="text">ちゃんぐるもんぐるぼくいがぐり</div>
+          </div>
+        </div>
+
+        <!-- 自分の吹き出し -->
+        <div class="line__right">
+          <div class="text">ぼいーんぼいーん</div>
+          <span class="date">既読<br />0:30</span>
+        </div>
+      </div>
+
+      <div id="output"></div>
+      <!--　▲会話エリア ここまで -->
+
+      <!-- 入力エリア -->
+      <div class="input_text_wrapper">
+        <textarea id="input_text"></textarea>
+        <button id="send">Send</button>
+      </div>
+    </div>
+    <!--　▲LINE風 ここまで -->
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="js/myjs.js"></script>
+    <!-- JQuery -->
+  </body>
+</html>
